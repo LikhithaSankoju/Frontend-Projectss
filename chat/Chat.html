@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Chat</title>
+</head>
+<body>
+  <h2>WebSocket Chat</h2>
+  <div id="chatBox" style="border:1px solid #ccc; height:200px; overflow:auto;"></div>
+  <input type="text" id="messageInput" placeholder="Enter message..." />
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    let ws = new WebSocket("ws://localhost:8080/yourapp/websocket/chat"); // Adjust path if needed
+
+    ws.onmessage = function(event) {
+      const chatBox = document.getElementById("chatBox");
+      chatBox.innerHTML += event.data + "<br>";
+      chatBox.scrollTop = chatBox.scrollHeight;
+    };
+
+    function sendMessage() {
+      const input = document.getElementById("messageInput");
+      if (input.value.trim()) {
+        ws.send(input.value);
+        input.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
