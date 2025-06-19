@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Travel Adventure - Enhanced</title>
+</head>
+<body>
+
+<div class="header">
+  <h1>🌀 TIME TRAVEL ADVENTURE 🌀</h1>
+  <p>Collect keys and solve puzzles across time-warped locations!</p>
+</div>
+
+<div id="status-panel">
+  <div class="status-item">
+    <span class="status-label">🕒 Real Time:</span>
+    <span class="status-value" id="real-time"></span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">⏰ Game Time:</span>
+    <span class="status-value" id="game-time"></span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">⏱ Location Timer:</span>
+    <span class="status-value" id="location-timer"></span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">💖 Health:</span>
+    <span class="status-value" id="health"></span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">🗝 Keys:</span>
+    <span class="status-value" id="keys"></span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">📍 Location:</span>
+    <span class="status-value" id="location"></span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">🌀 Time Effect:</span>
+    <span class="status-value time-effect" id="time-effect"></span>
+  </div>
+  <div class="status-item">
+    <span class="status-label">🏆 Score:</span>
+    <span class="status-value" id="score"></span>
+  </div>
+</div>
+
+<div id="game-area">
+  <div id="console"></div>
+  <div id="map-container">
+    <canvas id="map" width="200" height="180"></canvas>
+    <div id="score-board">
+      <h3>🎯 OBJECTIVES</h3>
+      <p>Collect keys from:<br>
+      🔺 Bermuda Triangle<br>
+      🗿 Stonehenge<br>
+      🌲 Crooked Forest</p>
+      <p class="treasure">💰 Need ALL 3 keys for treasure!</p>
+      <p class="warning">⚠ 2 minutes per location!</p>
+    </div>
+  </div>
+</div>
+
+<input id="cmd" placeholder="Enter command (north/south/east/west/collect/answer/help)..." autofocus>
+
+
+</body>
+</html>
