@@ -7,7 +7,7 @@ const specialLocations = ["Bermuda Triangle", "Stonehenge", "Crooked Forest"];
 const directions = ["north", "south", "east"];
 const LOCATION_TIME_LIMIT = 120;
 const GAME_STORAGE_KEY = "timeTravelGameStateV1";
-
+// reverse
 function reverseDirection(direction) {
   switch (direction) {
     case "north": return "south";
